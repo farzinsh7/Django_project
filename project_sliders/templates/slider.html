@@ -1,0 +1,26 @@
+{% load static %}
+	<!-- Start slides -->
+	<div id="slides" class="cover-slides">
+		<ul class="slides-container">
+			{% for slid in slider %}
+            <li class="text-center">
+                <img src="{{ slid.img.url }}" alt="">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="m-b-20"><strong>Welcome To <br> {{ slid.title }}</strong></h1>
+							<p class="m-b-40">{{ slid.description }}</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{{ slid.button_url }}">Reservation</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+            {% endfor %}
+		</ul>
+		<div class="slides-navigation">
+			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<!-- End slides -->
+
